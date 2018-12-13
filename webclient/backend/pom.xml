@@ -17,6 +17,8 @@
 
 	<modules>
 		<module>gecko-web</module>
+		<module>gecko-database</module>
+		<module>gecko-business</module>
 	</modules>
 
 	<properties>
