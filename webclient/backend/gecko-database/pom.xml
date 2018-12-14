@@ -27,12 +27,23 @@
                 <artifactId>liquibase-maven-plugin</artifactId>
                 <version>3.6.2</version>
                 <configuration>
-                    <propertyFile>liquibase/gecko-liquibase.xml</propertyFile>
+                    <changeLogFile>liquibase/db-changelog-master.xml</changeLogFile>
                     <driver>org.postgresql.Driver</driver>
                     <outputFileEncoding>UTF-8</outputFileEncoding>
                     <verbose>true</verbose>
                     <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
+                    <driver>org.postgresql.Driver</driver>
+                    <url>jdbc:postgresql://localhost:5432/gecko</url>
+                    <username>local</username>
+                    <password>local</password>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.postgresql</groupId>
+                        <artifactId>postgresql</artifactId>
+                        <version>42.2.5</version>
+                    </dependency>
+                </dependencies>
                 <executions>
                     <execution>
                         <phase>process-resources</phase>

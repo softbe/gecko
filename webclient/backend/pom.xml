@@ -14,11 +14,12 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>gecko</name>
 	<description>Gecko video streaming service.</description>
+	<packaging>pom</packaging>
 
 	<modules>
 		<module>gecko-web</module>
 		<module>gecko-database</module>
-		<module>gecko-business</module>
+		<module>gecko-domain</module>
 	</modules>
 
 	<properties>
