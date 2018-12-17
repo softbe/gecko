@@ -1,4 +1,4 @@
-package ru.softbe.gecko.model;
+package ru.softbe.gecko.domain.model;
 
 import lombok.Data;
 
@@ -10,8 +10,8 @@ import java.util.Set;
 public class Category {
     @Id
     @Column(unique = true, nullable = false)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CATEGORY_SEQ")
-    @SequenceGenerator(name = "CATEGORY_SEQ", sequenceName = "CATEGORY_SEQ", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CATEGORY_ID_SEQ")
+    @SequenceGenerator(name = "CATEGORY_ID_SEQ", sequenceName = "CATEGORY_ID_SEQ", allocationSize = 1)
     private Long id;
 
     @Column(name = "name", nullable = false)

@@ -1,4 +1,4 @@
-package ru.softbe.gecko.model;
+package ru.softbe.gecko.domain.model;
 
 import lombok.Data;
 
@@ -9,8 +9,8 @@ import javax.persistence.*;
 public class Camera {
     @Id
     @Column(unique = true, nullable = false)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CAMERA_SEQ")
-    @SequenceGenerator(name = "CAMERA_SEQ", sequenceName = "CAMERA_SEQ", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CAMERA_ID_SEQ")
+    @SequenceGenerator(name = "CAMERA_ID_SEQ", sequenceName = "CAMERA_ID_SEQ", allocationSize = 1)
     private Long id;
 
     @Column(name = "login", nullable = false)
